@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import include,path
 from rest_framework import routers
 from quickstart import views
-from django.views.static import serve
+# from django.views.static import serve
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
 from django.conf import settings
@@ -57,6 +57,6 @@ urlpatterns = [
     # url(r'^log/$',views.Login.as_view()),
     # path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+#     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+#     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
