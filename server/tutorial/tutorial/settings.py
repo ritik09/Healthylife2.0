@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 's#lengg%x*chd5rs75hp&q(t@7(_ktgvnm=@d0hll8)5ur==$j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -149,8 +149,9 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, './quickstart/static'),
 ] 
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 JWT_AUTH = {

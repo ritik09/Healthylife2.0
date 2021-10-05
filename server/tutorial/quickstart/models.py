@@ -17,7 +17,7 @@ class User(AbstractUser):
     last_name=models.CharField(max_length=200)
     password=models.CharField(validators=[RegexValidator(regex='^.{6}$', message='Length has to be 6', code='nomatch')],max_length=50) 
     confirm_password=models.CharField(validators=[RegexValidator(regex='^.{6}$', message='Length has to be 6', code='nomatch')],max_length=50,null=True)
-    image =models.ImageField(upload_to='pics',null='True')
+    image =models.ImageField(upload_to='static',null='True')
     street_name = models.CharField(max_length=100,null=True)    
     rating = models.IntegerField(null = True, blank = True)
 
@@ -44,7 +44,7 @@ class Doctor(models.Model):
     Years_of_Experience = models.IntegerField()
     Specialization = models.ForeignKey(Category,on_delete=models.CASCADE,null=True)
     Contact = models.IntegerField()
-    image = models.ImageField(upload_to='pics',null='True')
+    image = models.ImageField(upload_to='static',null='True')
     hospital = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
 
 
