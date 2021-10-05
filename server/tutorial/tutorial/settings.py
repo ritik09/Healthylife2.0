@@ -153,7 +153,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, './media/static'),
 # ] 
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 JWT_AUTH = {
