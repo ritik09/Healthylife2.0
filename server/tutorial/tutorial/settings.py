@@ -150,7 +150,7 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, './quickstart/static'),
+    os.path.join(BASE_DIR, './media/static'),
 ] 
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 CORS_ALLOW_CREDENTIALS = True
